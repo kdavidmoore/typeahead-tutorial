@@ -31,12 +31,25 @@ var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
   'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
 ];
 
+// imdb.com Top 250 list
+var imdb = [
+"The Shawshank Redemption",
+"The Godfather",
+"The Godfather: Part II",
+"Schindler's List",
+"The Dark Knight",
+"Pulp Fiction",
+"12 Angry Men",
+"The Lord of the Rings: The Return of the King",
+"The Good, the Bad, and the Ugly"
+];
+
 $('#the-basics .typeahead').typeahead({
   hint: true,
   highlight: true,
   minLength: 1
 },
 {
-  name: 'states',
-  source: substringMatcher(states)
+  name: 'imdb',
+  source: substringMatcher(imdb)
 });
